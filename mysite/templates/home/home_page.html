@@ -1,20 +1,9 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% load wagtailcore_tags wagtailimages_tags %}
 
-{% load wagtailcore_tags wagtailimages_tags %}
 
 {% block content %}
 
+<h1 class="display-1">{{ page.banner_title }}</h1>
+<div>{{ page.banner_subtitle | richtext }}</div>
 
-{% image self.banner_image fill-1920x1080 as banner_image %}
-
-<div style="background-image: url('{{ banner_image.url}}');
-    background-size: cover;
-    background-position: center center;
-    padding:50px 50px;
-    color:white;">
-    <h1 class="display-1">{{ self.banner_title }}</h1>
-    <div class="lead">{{ self.banner_subtitle | richtext }}</div>
-</div>
-
-
-{% endblock %}  
+{% endblock %}

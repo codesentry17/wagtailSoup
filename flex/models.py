@@ -8,10 +8,10 @@ from wagtail.fields import RichTextField, StreamField
 
 class FlexPage(Page):
 
-    subtitle = models.CharField(max_length=100, blank=True, null=True)
+    banner_subtitle = models.CharField(max_length=100, blank=True, null=True)
 
     content_panels = Page.content_panels + [
-        FieldPanel('subtitle'),
+        FieldPanel('banner_subtitle')
     ]
 
     

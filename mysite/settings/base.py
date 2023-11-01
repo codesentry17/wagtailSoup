@@ -27,7 +27,7 @@ INSTALLED_APPS = [
     "home",
     "search",
     'flex',
-
+    'advertisement',
     "wagtail.contrib.forms",
     "wagtail.contrib.redirects",
     "wagtail.embeds",
@@ -75,6 +75,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                "advertisement.context_processor.extras"
             ],
         },
     },
@@ -89,7 +90,7 @@ WSGI_APPLICATION = "mysite.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": 'symphony',
+        "NAME": 'heartsymphony',
         'USER': 'postgres',
         'PASSWORD': 'password',
         'HOST': 'localhost',
