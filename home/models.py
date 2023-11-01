@@ -7,6 +7,8 @@ from wagtail.fields import RichTextField
 
 class HomePage(Page):
     
+    max_count = 1
+
     banner_title = models.CharField(max_length=100, blank=False, null=True)
 
     banner_subtitle = RichTextField(blank=False, null=True)
