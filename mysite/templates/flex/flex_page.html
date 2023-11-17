@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
-
+{% load wagtailcore_tags wagtailimages_tags %}
 {% block content %}
 
 <div>{{ page.title }}</div>
 <div>{{ page.banner_subtitle }}</div>
+<div>{{ page.body | richtext }}</div>
 
 {% endblock %}

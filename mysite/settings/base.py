@@ -28,6 +28,8 @@ INSTALLED_APPS = [
     "search",
     'flex',
     'advertisement',
+    'menus',
+
     "wagtail.contrib.forms",
     "wagtail.contrib.redirects",
     "wagtail.embeds",
@@ -75,7 +77,8 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
-                "advertisement.context_processor.extras"
+                "advertisement.context_processor.extras",
+                "menus.context_processor.get_menu"
             ],
         },
     },
