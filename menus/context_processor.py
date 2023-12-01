@@ -1,4 +1,6 @@
-from .models import Menu
+from .models import Navbar
 
-def get_menu(request):
-    return {'navigation':Menu.objects.get(slug="x")}
+def get_navbar(request):
+    if(Navbar.objects.exists()):
+        return {'nav_tabs': Navbar.objects.first().nav_items.all()}
+    return {'nav_tabs':None}
